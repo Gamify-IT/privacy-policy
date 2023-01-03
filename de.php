@@ -1,3 +1,15 @@
+<?php
+if(file_exists('config.json'))
+{
+    $filename = 'config.json';
+    $data = file_get_contents($filename); //data read from json file
+    print_r($data);
+    $config = json_decode($data);  //decode a data
+
+    print_r($config); //array format data printing
+}
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -6,7 +18,7 @@
 </head>
 <body>
 <h1>Datenschutzerklärung</h1>
-<a href="index.html">&#x1F1EC;&#x1F1E7;/&#x1F1FA;&#x1F1F8</a>
+<a href="index.php">&#x1F1EC;&#x1F1E7;/&#x1F1FA;&#x1F1F8</a>
 
 <h2>1. Datenschutz auf einen Blick</h2>
 <h3>Allgemeine Hinweise</h3>
@@ -29,10 +41,10 @@
 <p>Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
 <h3>Hinweis zur verantwortlichen Stelle</h3>
 <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p>
-<p>[UNDEFINED]</p>
+<p><?= $config->address; ?></p>
 
-<p>Telefon: <a href="tel:[UNDEFINED]">[UNDEFINED]</a><br />
-    E-Mail: <a href="mailto:[UNDEFINED]">[UNDEFINED]</a></p>
+<p>Telefon: <a href="tel:<?= $config->phone; ?>"><?= $config->phone; ?></a><br />
+    E-Mail: <a href="mailto:<?= $config->email; ?>"><?= $config->email; ?></a></p>
 <p>Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.</p>
 
 <h3>Speicherdauer</h3>

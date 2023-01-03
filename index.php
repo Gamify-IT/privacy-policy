@@ -1,3 +1,15 @@
+<?php
+if(file_exists('config.json'))
+{
+    $filename = 'config.json';
+    $data = file_get_contents($filename); //data read from json file
+    print_r($data);
+    $config = json_decode($data);  //decode a data
+
+    print_r($config); //array format data printing
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +18,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<a href="de.html">&#x1F1E9;&#x1F1EA;</a>
+<a href="de.php">&#x1F1E9;&#x1F1EA;</a>
 
 <h2>1. Data protection at a glance</h2>
 <h3>General notes</h3>
@@ -30,9 +42,9 @@
 <p>We point out that data transmission over the Internet (eg communication by e-mail) security gaps. A complete protection of the data against access by third parties is not possible.</p>
 <h3>Note on the responsible body</h3>
 <p>The responsible party for data processing on this website is:</p>
-<p>[UNDEFINED]</p>
-<p>Phone: <a href="tel:[UNDEFINED]">[UNDEFINED]</a> <br>
-    E-mail: <a href="mailto:[UNDEFINED]">[UNDEFINED]</a></p>
+<p><?= $config->address; ?></p>
+<p>Phone: <a href="tel:<?= $config->phone; ?>"><?= $config->phone; ?></a> <br>
+    E-mail: <a href="mailto:<?= $config->email; ?>"><?= $config->email; ?></a></p>
 <p>The controller is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g. names, e-mail addresses, etc.).</p>
 <h3>Storage duration</h3>
 <p>Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g. retention periods under tax or commercial law); in the latter case, the data will be deleted once these reasons no longer apply.</p>
