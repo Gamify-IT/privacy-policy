@@ -2,11 +2,8 @@
 if(file_exists('config.json'))
 {
     $filename = 'config.json';
-    $data = file_get_contents($filename); //data read from json file
-    print_r($data);
-    $config = json_decode($data);  //decode a data
-
-    print_r($config); //array format data printing
+    $data = file_get_contents($filename);
+    $config = json_decode($data);
 }
 ?>
 
@@ -75,13 +72,6 @@ if(file_exists('config.json'))
 <p>If SSL or TLS encryption is activated, the data you transmit to us cannot be read by third parties.</p>
 
 <h2>3. Data collection on this website</h2>
-<h3>Cookies</h3>
-<p>Our Internet pages use so-called "cookies". Cookies are small data packets and do not cause any damage to your end device. They are stored either temporarily for the duration of a session (session cookies) or permanently (permanent cookies) on your end device. Session cookies are automatically deleted at the end of your visit. Permanent cookies remain stored on your end device until you delete them yourself or until they are automatically deleted by your web browser.</p>
-<p>In some cases, cookies from third-party companies may also be stored on your terminal device when you enter our site (third-party cookies). These enable us or you to use certain services of the third-party company (e.g. cookies for processing payment services).</p>
-<p>Cookies have various functions. Many cookies are technically necessary, as certain website functions would not work without them (e.g. the shopping cart function or the display of videos). Other cookies are used to evaluate user behavior or display advertising.</p>
-<p>Cookies that are necessary to carry out the electronic communication process, to provide certain functions that you have requested (e.g. for the shopping cart function) or to optimize the website (e.g. cookies to measure the web audience) (necessary cookies) are stored on the basis of Art. 6 (1) lit. f DSGVO, unless another legal basis is specified. The website operator has a legitimate interest in storing necessary cookies for the technically error-free and optimized provision of its services. If consent to the storage of cookies and comparable recognition technologies has been requested, the processing is based exclusively on this consent (Art. 6 para. 1 lit. a DSGVO and § 25 para. 1 TTDSG); the consent can be revoked at any time.</p>
-<p>You can set your browser so that you are informed about the setting of cookies and only allow cookies in individual cases, exclude the acceptance of cookies for certain cases or in general and activate the automatic deletion of cookies when closing the browser. When deactivating cookies, the functionality of this website may be limited.</p>
-<p>If cookies are used by third-party companies or for analysis purposes, we will inform you about this separately within the framework of this data protection declaration and, if necessary, request your consent.</p>
 <h3>Server log files</h3>
 <p>The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:</p>
 <ul>
