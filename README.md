@@ -2,7 +2,7 @@
 
 This repo stores the privacy policy text for Gamify-IT in german and english.
 
-To place yor address in the image mount the `config.json` into `/var/www/html/config.json`.
+To place yor configuration in the image mount the `config.json` into `/var/www/html/config.json`.
 
 The `config.json` shoul look like this:
 
