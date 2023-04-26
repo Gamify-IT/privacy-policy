@@ -1,6 +1,5 @@
-FROM nginx:alpine as production-build
+FROM php:apache
 
-COPY index.php /usr/share/nginx/html
-COPY de.php /usr/share/nginx/html
+COPY ./website /var/www/html
 
 EXPOSE 80/tcp
