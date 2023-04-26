@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+
+  third-party-license-notice:
+    container_name: privacy-policy
+    build: .
+    ports:
+      - "80:80"
