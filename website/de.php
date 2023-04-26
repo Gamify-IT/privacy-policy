@@ -1,6 +1,5 @@
 <?php
-if(file_exists('config.json'))
-{
+if (file_exists('config.json')) {
     $filename = 'config.json';
     $data = file_get_contents($filename);
     $config = json_decode($data);
